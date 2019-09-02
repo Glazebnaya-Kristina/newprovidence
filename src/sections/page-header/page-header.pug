@@ -1,0 +1,28 @@
+//- Все примеси в этом файле должны начинаться c имени блока (page-header)
+
+mixin page-header(mods)
+  -
+  header.page-header(class=allMods, role='banner')&attributes(attributes)
+    .page-header__inner
+      block
+      .page-header__top
+        nav.page-header__navigation.navigation
+          ul.navigation__list
+            li.navigation__item
+              a(href="#").link Tour
+            li.navigation__item
+              a(href="#").link Features
+            li.navigation__item
+              a(href="#").link Pricing
+            li.navigation__item
+              a(href="#").link Help
+            li.navigation__item
+              a(href="#").link Contacts
+        a.page-header__logo.logo
+          img(src="images/logo.png" alt="Логотип").logo__img
+        button(type="button").btn.btn--blue.btn--icon.btn--icon-apple Get  App
+      .page-header__banner
+        h1.page-header__title What happens tomorrow?
+        p.page-header__subtitle.
+          The sight of the tumblers restored Bob Sawyer to a degree of equanimity which he had not possessed since his interview with his landlady. His face brightened up, and he began to feel quite convivial.
+        button(type="button").btn.btn--border.btn--border-grey.btn--big-horizontal.btn--big-vertical.btn--icon.btn--icon-play Watch Video

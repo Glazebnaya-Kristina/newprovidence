@@ -1,0 +1,19 @@
+.security{
+  padding: 265px 0 300px;
+  background-image: url($imageDir + "iPhone.png");
+  background-position: left top 120%;
+  background-repeat: no-repeat;
+
+}
+
+.security__inner{
+  @include container;
+}
+
+.security__wrapper{
+  margin-left: auto;
+}
+
+.security__buttons{
+  margin-top: 70px;
+}

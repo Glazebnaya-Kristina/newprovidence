@@ -1,0 +1,9 @@
+.link {
+  display: inline-block;
+  color: $gray-dark2;
+  text-decoration: none;
+  transition: all .3s;
+  &:hover{
+    opacity: .4;
+  }
+}

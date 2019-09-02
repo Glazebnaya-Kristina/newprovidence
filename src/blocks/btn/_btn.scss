@@ -1,0 +1,212 @@
+// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+//.btn {
+//  box-sizing: border-box;
+//  display: inline-block;
+//  max-width: 100%;
+//  overflow: hidden;
+//  margin: 0;
+//  border-radius: $border-radius;
+//  // border: 1px solid $gray-lighter;
+//  border: 0;
+//  padding: $field-padding-vertical  $field-padding-horizontal;
+//  vertical-align: middle;
+//  white-space: nowrap;
+//  text-overflow: ellipsis;
+//  user-select: none;
+//  text-align: center;
+//  font-size: 1em;
+//  font-family: inherit;
+//  title-line-height: $title-line-height;
+//  text-decoration: none;
+//  text-transform: none;
+//  color: $text-color;
+//  background-color: $gray-lightest;
+//  background-image: none;
+//  cursor: pointer;
+//
+//  &:hover,
+//  &:focus {
+//    text-decoration: none;
+//    color: $text-color;
+//    background-color: darken($gray-lightest, 10%);
+//    // border-color: darken($gray-lighter, 12%);
+//  }
+//
+//  // &:visited {
+//  //   color: $text-color;
+//  // }
+//
+//  &:active,
+//  &:focus {
+//    @include field-focus;
+//  }
+//
+//  &--disabled,
+//  &:disabled {
+//    opacity: $opacity;
+//    cursor: not-allowed;
+//    color: $text-color;
+//    background-color: $gray-lightest;
+//    // border-color: $gray-lighter;
+//
+//    @at-root a.btn--disabled {
+//      pointer-events: none;
+//    }
+//  }
+
+// &__icon {
+//   display: inline-block;
+//   vertical-align: middle;
+// }
+
+
+// &--main {
+//   color: #fff;
+//   background-color: $color-main;
+//   // border: 1px solid $color-main;
+
+//   &:hover,
+//   &:focus {
+//     color: #fff;
+//     background-color: darken($color-main, 10%);
+//     // border-color: darken($color-main, 12%);
+//   }
+
+//   &--disabled,
+//   &:disabled {
+//     color: #fff;
+//     background-color: $color-main;
+//     // border-color: $color-main;
+//   }
+// }
+//}
+
+
+.btn {
+  display: inline-flex;
+  max-width: 100%;
+  margin: 0;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: $border-radius;
+  background-color: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all $transition-time;
+}
+
+.btn--blue {
+  color: $white;
+  background-color: #267df4;
+  &:hover{
+    background-color: darken(#267df4, 10%);
+  }
+}
+
+.btn--green {
+  color: $white;
+  background-color: #6fc754;
+  &:hover{
+    background-color: darken(#6fc754, 10%);
+  }
+}
+
+.btn--dark-blue {
+  color: $white;
+  background-color: #22233a;
+  &:hover{
+    background-color: #210862;
+  }
+}
+
+.btn--border {
+  border: 1px solid;
+}
+
+.btn--border-grey {
+  border-color: rgba(#26272d, .2);
+  color: $gray-dark2;
+  &:hover{
+    background-color: rgba(#26272d, .2);
+  }
+}
+
+.btn--big-horizontal {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.btn--big-vertical {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.btn--middle {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.btn--icon {
+  position: relative;
+
+  &:after {
+    @include pseudo;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.btn--icon-apple {
+  padding-left: 50px;
+
+  &:after {
+    @include pseudo;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-55%);
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/icon-apple.png");
+  }
+}
+
+.btn--icon-arrow {
+  padding-right: 60px;
+
+  &:after {
+    @include pseudo;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-55%);
+    width: 20px;
+    height: 18px;
+    background-image: url("../images/icon-arrow.png");
+  }
+}
+
+.btn--icon-play {
+  padding-left: 65px;
+
+  &:after {
+    @include pseudo;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 11px;
+    height: 11px;
+    background-image: url("../images/icon-play.png");
+  }
+}
+
+.btn--absolute{
+  position: absolute;
+}
+
+.btn--absolute-right{
+  right: 5px;
+  top: 5px;
+}
+

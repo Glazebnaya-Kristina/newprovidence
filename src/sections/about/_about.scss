@@ -1,0 +1,14 @@
+.about{
+  padding: 145px 0 220px;
+  background-image: url($imageDir + "map.png");
+  background-position: right top 30%;
+  background-repeat: no-repeat;
+}
+
+.about__inner{
+  @include container;
+}
+
+.about__buttons{
+  margin-top: 85px;
+}

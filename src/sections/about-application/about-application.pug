@@ -1,0 +1,20 @@
+mixin about-application(mods)
+  -
+  section.about-application(class=allMods)&attributes(attributes)
+    .about-application__inner
+      h2.about-application__title.title-line Beautiful Interface
+      span.about-application__text Landing Screen
+      img(src="images/screens2.png").about-application__img
+      img(src="images/logo.png").about-application__logo.logo.logo--opacity
+      h3.about-application__subtitle Get it to your smartphone
+      form.about-application__form.form.form--middle
+        p.form__wrapper
+          input(type="email" placeholder="denis@getcraftwork.com").form__input.input
+          button(type="button").form__button.btn.btn--green.btn--middle.btn--absolute.btn--absolute-right.btn--icon.btn--icon-arrow Send Invite
+      span.about-application__text or Download From
+      //a(href="#").btn.btn--dark-blue
+      //  svg(width="30" height="35" viewBox="0 0 30 35")
+      //    use(xlink:href="icons/sprite.svg#icon-app")
+      //  | Скачать с
+      //  span.btn__span Appstore
+

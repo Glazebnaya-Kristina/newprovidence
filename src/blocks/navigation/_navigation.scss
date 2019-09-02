@@ -1,0 +1,10 @@
+.navigation__list{
+  @include ul-reset;
+  display: flex;
+}
+
+.navigation__item{
+  &:not(:last-child){
+    margin-right: 60px;
+  }
+}

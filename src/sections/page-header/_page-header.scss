@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-header {
+  position: relative;
+  padding: 45px 0 510px;
+  background-image: url($imageDir + "bg-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  &:after{
+    @include pseudo;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 370px;
+    height: 455px;
+    background-image: url($imageDir + "img-iphone.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.page-header__inner{
+  @include container;
+}
+
+.page-header__top{
+  display: flex;
+  align-items: center;
+  margin-bottom: 110px;
+}
+
+.page-header__logo{
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.page-header__banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header__title{
+  margin-bottom: 40px;
+  font-size: 62px;
+  color: $text-title;
+}
+
+.page-header__subtitle{
+  max-width: 790px;
+  font-size: 20px;
+  margin-bottom: 60px;
+  text-align: center;
+}
